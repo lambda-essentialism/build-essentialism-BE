@@ -1,12 +1,7 @@
 package com.lambda.essentialism;
 
-import com.lambda.essentialism.model.Message;
-import com.lambda.essentialism.model.Subscriber;
 import com.lambda.essentialism.model.Value;
-import com.lambda.essentialism.repo.MessageRepo;
-import com.lambda.essentialism.repo.SubscriberRepo;
 
-import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
@@ -17,31 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 @Transactional
 public class SeedData implements CommandLineRunner {
-  private SubscriberRepo subscriberRepos;
-  private MessageRepo messageRepos;
 private ValueRepo valueRepos;
 
-  public SeedData(SubscriberRepo subscriberRepos, MessageRepo messageRepos, ValueRepo valueRepos) {
-    this.subscriberRepos = subscriberRepos;
-    this.messageRepos = messageRepos;
+  public SeedData(ValueRepo valueRepos) {
     this.valueRepos = valueRepos;
   }
 
   @Override
   public void run(String[] args) throws Exception {
-    Subscriber sub1 = new Subscriber("test1@test.com");
-    Subscriber sub2 = new Subscriber("test2@test.com");
-    ArrayList<Subscriber> allSubscribers = new ArrayList<>();
-    allSubscribers.add(sub1);
-    allSubscribers.add(sub2);
-    subscriberRepos.save(sub1);
-    subscriberRepos.save(sub2);
-
-    Message msg1 = new Message("Garrett", "gw@hi.com", "whats up dude");
-    messageRepos.save(msg1);
-    Message msg2 = new Message("Hard Ass", "hard@ass.com", "I'm a hard ass");
-    messageRepos.save(msg2);
-
     Value val1 = new Value("Athletic ability");
     Value val2 = new Value("Creativity, discovering, or inventing things to make a difference in the world");
     Value val3 = new Value("Independence");
@@ -66,6 +44,5 @@ private ValueRepo valueRepos;
     valueRepos.save(val10);
     valueRepos.save(val11);
   }
-
 }
 
