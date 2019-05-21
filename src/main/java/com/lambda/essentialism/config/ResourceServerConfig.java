@@ -26,6 +26,7 @@ public class ResourceServerConfig
 
     http.authorizeRequests().antMatchers(
       "/api/**",
+      "/register",
       "/values",
       "/h2-console/**",
       "/v2/api-docs",

@@ -32,5 +32,9 @@
     "husky": "^2.3.0",
     "prettier": "1.17.1",
     "prettier-plugin-java": "0.0.10"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-fetch": "^2.6.0"
   }
 }

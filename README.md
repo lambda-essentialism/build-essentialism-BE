@@ -2,46 +2,20 @@
 ## Base Url
 `https://lambda-essentialism-backend.herokuapp.com/api`
 
-## Get Authorization Token 
-
-`/oauth/token`
-
-```javascript
-
-const axios = require('axios');
-
-var reqData = {"username":"admin",
-"password":"password",
-"grant_type": "password"}
-
-var queryString = Object.keys(reqData).map(key => key + '=' + reqData[key]).join('&');
-
-axios.request({
-    url: "http://localhost:2019/oauth/token",
-    method: "post",
-    withCredentials: true,
-    auth: {
-      username: "lambda-client", // This is the client_id
-      password: "lambda-secret" ,// This is the client_secret,
-      
-    },
-    
-    data: queryString
-    
-      
-
-  }).then(respose => {
-    console.log(respose);  
-  }
-  
-  ).catch(error => {
-    console.log(error)
-}); 
-```
-
 ### Values
 GET
 `/values`
+
+### Register New User
+POST
+`/register`
+Expected JSON body
+```JSON
+{
+  "username": "yourusername",
+  "password": "yourpassword"
+}
+```
 
 # build-essentialism-BE
 "Essentialism:
