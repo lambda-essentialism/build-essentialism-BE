@@ -4,13 +4,7 @@
   "description": "Lambda Build Week 3 Backend: Essentialism",
   "main": "index.js",
   "scripts": {
-    "lint": "prettier --write \"**/*.java\"",
-    "test": "echo \"Error: no test specified\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "lint": "prettier --write \"**/*.java\""
   },
   "repository": {
     "type": "git",
@@ -29,7 +23,6 @@
   },
   "homepage": "https://github.com/lambda-essentialism/build-essentialism-BE#readme",
   "devDependencies": {
-    "husky": "^2.3.0",
     "prettier": "1.17.1",
     "prettier-plugin-java": "0.0.10"
   },

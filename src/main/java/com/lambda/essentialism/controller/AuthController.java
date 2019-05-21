@@ -43,11 +43,8 @@ public class AuthController {
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
   }
 
-  @GetMapping(value = "/user/{userId}", produces = { "application/json" })
-  public ResponseEntity<?> getUser(
-    @PathVariable
-    Long userId
-  ) {
+  @GetMapping(value = "/user/{userId}")
+  public ResponseEntity<?> getUser(@PathVariable Long userId) {
     User u = userService.findUserById(userId);
     return new ResponseEntity<>(u, HttpStatus.OK);
   }

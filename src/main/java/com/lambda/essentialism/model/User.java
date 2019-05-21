@@ -36,13 +36,15 @@ public class User
 
   public User() {}
 
-  public User(String username, String password, List<UserRoles> userRoles) {
+  public User(String username, String password, List<UserRoles> userRoles, List<UserValues> userValues) {
     setUsername(username);
     setPassword(password);
     for (UserRoles ur : userRoles) {
       ur.setUser(this);
     }
     this.userRoles = userRoles;
+    this.userValues = userValues;
+
   }
 
   public long getUserid() {
@@ -91,5 +93,12 @@ public class User
     return rtnList;
   }
 
+  public List<UserValues> getUserValues() {
+    return userValues;
+  }
+
+  public void setUserValues(List<UserValues> userValues) {
+    this.userValues = userValues;
+  }
 }
 

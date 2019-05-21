@@ -10,7 +10,7 @@ public interface ValueService {
 
   Value save(Value message);
 
-  Value findMsgById(long id);
+  Value findById(long id);
 
   Value read(long id);
 

@@ -10,8 +10,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "values")
 public class Value {
-  @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private long valueid;
 
   @Column(name = "title", nullable = false, unique = true)
@@ -19,7 +19,7 @@ public class Value {
 
   @JsonIgnoreProperties("value")
   @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
-  private List<UserValues> userRoles = new ArrayList<>();
+  private List<UserValues> userValues = new ArrayList<>();
 
   public Value() {}
 
@@ -27,12 +27,12 @@ public class Value {
     this.title = title;
   }
 
-  public long getId() {
+  public long getValueid() {
     return valueid;
   }
 
-  public void setId(long id) {
-    this.valueid = id;
+  public void setValueid(long valueid) {
+    this.valueid = valueid;
   }
 
   public String getTitle() {
@@ -43,13 +43,12 @@ public class Value {
     this.title = title;
   }
 
-  public List<UserValues> getUserRoles() {
-    return userRoles;
+  public List<UserValues> getUserValues() {
+    return userValues;
   }
 
-  public void setUserRoles(List<UserValues> userRoles) {
-    this.userRoles = userRoles;
+  public void setUserValues(List<UserValues> userValues) {
+    this.userValues = userValues;
   }
-
 }
 

@@ -1,5 +1,7 @@
 package com.lambda.essentialism.service;
 
+import com.lambda.essentialism.exception.ResourceNotFoundException;
+import com.lambda.essentialism.model.User;
 import com.lambda.essentialism.model.Value;
 import com.lambda.essentialism.repo.ValueRepo;
 
@@ -29,8 +31,8 @@ public class ValueServiceImpl implements ValueService {
   }
 
   @Override
-  public Value findMsgById(long id) {
-    return null;
+  public Value findById(long id) throws ResourceNotFoundException {
+    return valueRepo.findById(id).orElseThrow(()-> new ResourceNotFoundException((Long.toString(id))));
   }
 
   @Override
