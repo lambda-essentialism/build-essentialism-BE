@@ -1,31 +1,75 @@
 package com.lambda.essentialism;
 
+import com.lambda.essentialism.model.Role;
+import com.lambda.essentialism.model.User;
+import com.lambda.essentialism.model.UserRoles;
 import com.lambda.essentialism.model.Value;
+import com.lambda.essentialism.repo.RoleRepository;
+import com.lambda.essentialism.repo.UserRepository;
+import com.lambda.essentialism.repo.ValueRepo;
 
+import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
-import com.lambda.essentialism.repo.ValueRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 @Transactional
 public class SeedData implements CommandLineRunner {
-private ValueRepo valueRepos;
+  private ValueRepo valueRepos;
+  RoleRepository rolerepos;
+  UserRepository userrepos;
 
-  public SeedData(ValueRepo valueRepos) {
+  public SeedData(
+    ValueRepo valueRepos,
+    RoleRepository rolerepos,
+    UserRepository userrepos
+  ) {
     this.valueRepos = valueRepos;
+    this.rolerepos = rolerepos;
+    this.userrepos = userrepos;
   }
 
   @Override
   public void run(String[] args) throws Exception {
+    Role r1 = new Role("admin");
+    Role r2 = new Role("user");
+    Role r3 = new Role("data");
+
+    r1 = rolerepos.save(r1);
+    r2 = rolerepos.save(r2);
+    r3 = rolerepos.save(r3);
+
+    ArrayList<UserRoles> admins = new ArrayList<>();
+    admins.add(new UserRoles(new User(), r1));
+    admins.add(new UserRoles(new User(), r2));
+
+    ArrayList<UserRoles> users = new ArrayList<>();
+    users.add(new UserRoles(new User(), r2));
+
+    ArrayList<UserRoles> data = new ArrayList<>();
+    data.add(new UserRoles(new User(), r2));
+    data.add(new UserRoles(new User(), r3));
+
+    User u1 = new User("gw", "password", users);
+    User u2 = new User("admin", "password", admins);
+    User u3 = new User("user", "password", data);
+    userrepos.save(u1);
+    userrepos.save(u2);
+    userrepos.save(u3);
+
     Value val1 = new Value("Athletic ability");
-    Value val2 = new Value("Creativity, discovering, or inventing things to make a difference in the world");
+    Value val2 = new Value(
+      "Creativity, discovering, or inventing things to make a difference in the world"
+    );
     Value val3 = new Value("Independence");
     Value val4 = new Value("Kindness and generosity");
     Value val5 = new Value("Living in the moment");
-    Value val6 = new Value("Membership in a social group (such as your community, racial group, or school club)");
+    Value val6 = new Value(
+      "Membership in a social group (such as your community, racial group, or school club)"
+    );
     Value val7 = new Value("Music");
     Value val8 = new Value("My community");
     Value val9 = new Value("My moral principles");
@@ -44,5 +88,6 @@ private ValueRepo valueRepos;
     valueRepos.save(val10);
     valueRepos.save(val11);
   }
+
 }
 
