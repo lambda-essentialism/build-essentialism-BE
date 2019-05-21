@@ -5,12 +5,12 @@ import com.lambda.essentialism.model.Subscriber;
 import com.lambda.essentialism.model.Value;
 import com.lambda.essentialism.repo.MessageRepo;
 import com.lambda.essentialism.repo.SubscriberRepo;
-import com.lambda.essentialism.repo.ValueRepo;
 
 import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
+import com.lambda.essentialism.repo.ValueRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,13 +19,9 @@ import org.springframework.stereotype.Component;
 public class SeedData implements CommandLineRunner {
   private SubscriberRepo subscriberRepos;
   private MessageRepo messageRepos;
-  private ValueRepo valueRepos;
+private ValueRepo valueRepos;
 
-  public SeedData(
-    SubscriberRepo subscriberRepos,
-    MessageRepo messageRepos,
-    ValueRepo valueRepos
-  ) {
+  public SeedData(SubscriberRepo subscriberRepos, MessageRepo messageRepos, ValueRepo valueRepos) {
     this.subscriberRepos = subscriberRepos;
     this.messageRepos = messageRepos;
     this.valueRepos = valueRepos;
@@ -47,15 +43,11 @@ public class SeedData implements CommandLineRunner {
     messageRepos.save(msg2);
 
     Value val1 = new Value("Athletic ability");
-    Value val2 = new Value(
-      "Creativity, discovering, or inventing things to make a difference in the world"
-    );
+    Value val2 = new Value("Creativity, discovering, or inventing things to make a difference in the world");
     Value val3 = new Value("Independence");
     Value val4 = new Value("Kindness and generosity");
     Value val5 = new Value("Living in the moment");
-    Value val6 = new Value(
-      "Membership in a social group (such as your community, racial group, or school club)"
-    );
+    Value val6 = new Value("Membership in a social group (such as your community, racial group, or school club)");
     Value val7 = new Value("Music");
     Value val8 = new Value("My community");
     Value val9 = new Value("My moral principles");
@@ -73,6 +65,8 @@ public class SeedData implements CommandLineRunner {
     valueRepos.save(val9);
     valueRepos.save(val10);
     valueRepos.save(val11);
+
+
   }
 
 }
