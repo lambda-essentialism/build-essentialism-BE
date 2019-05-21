@@ -1,5 +1,10 @@
 package com.lambda.essentialism.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,10 +12,14 @@ import javax.persistence.*;
 public class Value {
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
-  private long id;
+  private long valueid;
 
   @Column(name = "title", nullable = false, unique = true)
   private String title;
+
+  @JsonIgnoreProperties("value")
+  @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
+  private List<UserValues> userRoles = new ArrayList<>();
 
   public Value() {}
 
@@ -19,11 +28,11 @@ public class Value {
   }
 
   public long getId() {
-    return id;
+    return valueid;
   }
 
   public void setId(long id) {
-    this.id = id;
+    this.valueid = id;
   }
 
   public String getTitle() {
@@ -32,6 +41,14 @@ public class Value {
 
   public void setTitle(String title) {
     this.title = title;
+  }
+
+  public List<UserValues> getUserRoles() {
+    return userRoles;
+  }
+
+  public void setUserRoles(List<UserValues> userRoles) {
+    this.userRoles = userRoles;
   }
 
 }

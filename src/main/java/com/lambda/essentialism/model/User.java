@@ -30,6 +30,10 @@ public class User
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserRoles> userRoles = new ArrayList<>();
 
+  @JsonIgnoreProperties("value")
+  @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
+  private List<UserValues> userValues = new ArrayList<>();
+
   public User() {}
 
   public User(String username, String password, List<UserRoles> userRoles) {
@@ -86,5 +90,6 @@ public class User
     }
     return rtnList;
   }
+
 }
 

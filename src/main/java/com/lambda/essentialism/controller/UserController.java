@@ -31,24 +31,13 @@ public class UserController {
     return new ResponseEntity<>(myUsers, HttpStatus.OK);
   }
 
-  @GetMapping(value = "/user/{userId}", produces = { "application/json" })
-  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-  public ResponseEntity<?> getUser(
-    @PathVariable
-    Long userId
-  ) {
-    User u = userService.findUserById(userId);
-    return new ResponseEntity<>(u, HttpStatus.OK);
-  }
+  //  }
 
   @GetMapping(value = "/getusername", produces = { "application/json" })
   @ResponseBody
   public ResponseEntity<?> getCurrentUserName(Authentication authentication) {
     return new ResponseEntity<>(authentication.getPrincipal(), HttpStatus.OK);
   }
-
-
-
 
   @PutMapping(value = "/user/{id}")
   public ResponseEntity<?> updateUser(
@@ -70,5 +59,6 @@ public class UserController {
     userService.delete(id);
     return new ResponseEntity<>(HttpStatus.OK);
   }
+
 }
 

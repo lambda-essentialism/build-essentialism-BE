@@ -34,32 +34,6 @@ public class SeedData implements CommandLineRunner {
 
   @Override
   public void run(String[] args) throws Exception {
-    Role r1 = new Role("admin");
-    Role r2 = new Role("user");
-    Role r3 = new Role("data");
-
-    r1 = rolerepos.save(r1);
-    r2 = rolerepos.save(r2);
-    r3 = rolerepos.save(r3);
-
-    ArrayList<UserRoles> admins = new ArrayList<>();
-    admins.add(new UserRoles(new User(), r1));
-    admins.add(new UserRoles(new User(), r2));
-
-    ArrayList<UserRoles> users = new ArrayList<>();
-    users.add(new UserRoles(new User(), r2));
-
-    ArrayList<UserRoles> data = new ArrayList<>();
-    data.add(new UserRoles(new User(), r2));
-    data.add(new UserRoles(new User(), r3));
-
-    User u1 = new User("gw", "password", users);
-    User u2 = new User("admin", "password", admins);
-    User u3 = new User("user", "password", data);
-    userrepos.save(u1);
-    userrepos.save(u2);
-    userrepos.save(u3);
-
     Value val1 = new Value("Athletic ability");
     Value val2 = new Value(
       "Creativity, discovering, or inventing things to make a difference in the world"
@@ -87,6 +61,32 @@ public class SeedData implements CommandLineRunner {
     valueRepos.save(val9);
     valueRepos.save(val10);
     valueRepos.save(val11);
+
+    Role r1 = new Role("admin");
+    Role r2 = new Role("user");
+    Role r3 = new Role("data");
+
+    r1 = rolerepos.save(r1);
+    r2 = rolerepos.save(r2);
+    r3 = rolerepos.save(r3);
+
+    ArrayList<UserRoles> admins = new ArrayList<>();
+    admins.add(new UserRoles(new User(), r1));
+    admins.add(new UserRoles(new User(), r2));
+
+    ArrayList<UserRoles> users = new ArrayList<>();
+    users.add(new UserRoles(new User(), r2));
+
+    ArrayList<UserRoles> data = new ArrayList<>();
+    data.add(new UserRoles(new User(), r2));
+    data.add(new UserRoles(new User(), r3));
+
+    User u1 = new User("gw", "password", users);
+    User u2 = new User("admin", "password", admins);
+    User u3 = new User("user", "password", data);
+    userrepos.save(u1);
+    userrepos.save(u2);
+    userrepos.save(u3);
   }
 
 }

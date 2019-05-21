@@ -22,6 +22,10 @@ public class Role
   @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
   private List<UserRoles> userRoles = new ArrayList<>();
 
+  @JsonIgnoreProperties("value")
+  @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
+  private List<UserValues> userValues = new ArrayList<>();
+
   public Role() {}
 
   public Role(String name) {
