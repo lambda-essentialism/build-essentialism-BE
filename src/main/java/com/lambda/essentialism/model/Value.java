@@ -5,8 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "values")
 public class Value {
-  @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id
   private long id;
 
   @Column(name = "title", nullable = false, unique = true)
@@ -33,5 +33,6 @@ public class Value {
   public void setTitle(String title) {
     this.title = title;
   }
+
 }
 
