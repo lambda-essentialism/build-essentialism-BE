@@ -52,6 +52,10 @@ public class UserServiceImpl implements UserDetailsService, UserService
     );
   }
 
+  public User findUserByUsername(String username) throws ResourceNotFoundException {
+    return userrepos.findByUsername(username);
+  }
+
   public List<User> findAll() {
     List<User> list = new ArrayList<>();
     userrepos.findAll().iterator().forEachRemaining(list::add);

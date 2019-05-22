@@ -1,6 +1,7 @@
 package com.lambda.essentialism.service.impl;
 
 import com.lambda.essentialism.exception.ResourceNotFoundException;
+import com.lambda.essentialism.model.User;
 import com.lambda.essentialism.model.Value;
 import com.lambda.essentialism.repository.ValueRepository;
 
@@ -42,8 +43,8 @@ public class ValueServiceImpl implements ValueService
   }
 
   @Transactional
-  public void saveUserValues(long userid, long roleid) {
-    valueRepository.insertUserValues(userid, roleid);
+  public void saveUserValues(long valueid, long userid) {
+    valueRepository.insertUserValues(valueid, userid);
   }
 
 }

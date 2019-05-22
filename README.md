@@ -1,13 +1,12 @@
 # Backend Endpoints
+## Base Url
+`https://lambda-essentialism-backend.herokuapp.com/api`
 
-### API URL `https://lambda-essentialism-backend.herokuapp.com`
-
----
-
+# API URL `https://lambda-essentialism-backend.herokuapp.com`
 ## POST  `/api/register`
 expected in body
 ```js
-// ALL FIELDS REQUIRED
+// ALL FEILDS REQUIRED
 {
 	"firstname": "foo", 
 	"lastname": "bar",
@@ -42,7 +41,8 @@ sample response
 ```
 
 
-## GET  `/api/value/{valueid}`
+## POST  `/api/value/{valueid}`
+Post to this end point with and the active user will have this value added to his userValues
 sample response
 ```js
 {

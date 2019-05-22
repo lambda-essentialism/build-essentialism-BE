@@ -21,18 +21,12 @@ public interface RoleRepository
   void deleteUserRolesByRoleId(long roleid);
 
   @Modifying
-  @Query(
-    value = "INSERT INTO UserRoles(userid, roleid) values (:userid, :roleid)",
-    nativeQuery = true
-  )
+  @Query(value = "INSERT INTO UserRoles(userid, roleid) values (:userid, :roleid)", nativeQuery = true)
   @Transactional
   void insertUserRoles(long userid, long roleid);
 
   @Modifying
-  @Query(
-    value = "DELETE from UserRoles where userid = :userid AND roleid = :roleid",
-    nativeQuery = true
-  )
+  @Query(value = "DELETE from UserRoles where userid = :userid AND roleid = :roleid", nativeQuery = true)
   @Transactional
   void deleteUserRoles(long userid, long roleid);
 

@@ -44,10 +44,10 @@ public class UserController
     return new ResponseEntity<>(u, HttpStatus.OK);
   }
 
-  @GetMapping(value = "/activeuser")
+  @GetMapping(value = "/thisuser")
   @ResponseBody
-  public ResponseEntity<?> getCurrentUserName(Authentication authentication) {
-    return new ResponseEntity<>(authentication.getPrincipal(), HttpStatus.OK);
+  public ResponseEntity<?> getCurrentUser(Authentication authentication) {
+    return new ResponseEntity<>(userService.findUserByUsername(authentication.getName()), HttpStatus.OK);
   }
 }
 
