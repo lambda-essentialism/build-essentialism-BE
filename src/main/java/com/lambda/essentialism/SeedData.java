@@ -1,9 +1,9 @@
 package com.lambda.essentialism;
 
 import com.lambda.essentialism.model.*;
-import com.lambda.essentialism.repo.RoleRepository;
-import com.lambda.essentialism.repo.UserRepository;
-import com.lambda.essentialism.repo.ValueRepo;
+import com.lambda.essentialism.repository.RoleRepository;
+import com.lambda.essentialism.repository.UserRepository;
+import com.lambda.essentialism.repository.ValueRepository;
 
 import java.util.ArrayList;
 
@@ -15,12 +15,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Transactional
 public class SeedData implements CommandLineRunner {
-  private ValueRepo valueRepos;
+  private ValueRepository valueRepos;
   RoleRepository rolerepos;
   UserRepository userrepos;
 
   public SeedData(
-    ValueRepo valueRepos,
+    ValueRepository valueRepos,
     RoleRepository rolerepos,
     UserRepository userrepos
   ) {

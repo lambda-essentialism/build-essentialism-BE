@@ -1,15 +1,11 @@
 package com.lambda.essentialism.controller;
 
-import com.lambda.essentialism.model.Role;
 import com.lambda.essentialism.model.User;
-import com.lambda.essentialism.repo.RoleRepository;
 import com.lambda.essentialism.service.RoleService;
 import com.lambda.essentialism.service.UserService;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.validation.Valid;
 
@@ -17,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;

@@ -1,15 +1,16 @@
-package com.lambda.essentialism.service;
+package com.lambda.essentialism.service.impl;
 
 import com.lambda.essentialism.exception.ResourceNotFoundException;
 import com.lambda.essentialism.model.User;
 import com.lambda.essentialism.model.UserRoles;
-import com.lambda.essentialism.repo.RoleRepository;
-import com.lambda.essentialism.repo.UserRepository;
+import com.lambda.essentialism.repository.RoleRepository;
+import com.lambda.essentialism.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lambda.essentialism.repo.ValueRepo;
+import com.lambda.essentialism.repository.ValueRepository;
+import com.lambda.essentialism.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,7 +20,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service(value = "userService")
-public class UserServiceImpl implements UserDetailsService, UserService {
+public class UserServiceImpl implements UserDetailsService, UserService
+{
   @Autowired
   private UserRepository userrepos;
 
@@ -27,7 +29,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
   private RoleRepository rolerepos;
 
   @Autowired
-  private ValueRepo valuerepos;
+  private ValueRepository valuerepos;
 
   @Transactional
   public UserDetails loadUserByUsername(String username)
