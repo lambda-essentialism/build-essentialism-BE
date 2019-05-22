@@ -15,6 +15,8 @@ public interface ValueService {
 
   Value read(long id);
 
-  void saveUserValues(long valueid, long userid);
+  void saveUserValue(long valueid, long userid);
+
+  void deleteUserValue(long valueid, long userid);
 }
 

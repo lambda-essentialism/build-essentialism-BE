@@ -14,7 +14,12 @@ public interface ValueRepository
     @Modifying
     @Query(value = "INSERT INTO UserValues(valueid, userid) values (:valueid, :userid)", nativeQuery = true)
     @Transactional
-    void insertUserValues(long valueid, long userid);
+    void insertUserValue(long valueid, long userid);
+
+    @Modifying
+    @Query(value = "DELETE FROM uservalues WHERE valueid=:valueid AND userid=:userid", nativeQuery = true)
+    @Transactional
+    void deleteUserValue(long valueid, long userid);
 
 }
 

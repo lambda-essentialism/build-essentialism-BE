@@ -92,3 +92,6 @@ sample response
 }
 ```
 
+## DELETE `/api/value{valueid}`
+Send a delete request to this endpoint and it will delete that value for the current user signed in;
+
