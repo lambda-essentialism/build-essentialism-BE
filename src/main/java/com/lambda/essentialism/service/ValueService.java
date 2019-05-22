@@ -13,6 +13,5 @@ public interface ValueService {
   Value findById(long id);
 
   Value read(long id);
-
 }
 

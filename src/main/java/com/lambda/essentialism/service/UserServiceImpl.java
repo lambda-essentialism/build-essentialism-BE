@@ -9,6 +9,7 @@ import com.lambda.essentialism.repo.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lambda.essentialism.repo.ValueRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,6 +25,9 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
   @Autowired
   private RoleRepository rolerepos;
+
+  @Autowired
+  private ValueRepo valuerepos;
 
   @Transactional
   public UserDetails loadUserByUsername(String username)

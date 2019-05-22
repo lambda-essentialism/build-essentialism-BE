@@ -1,10 +1,14 @@
 package com.lambda.essentialism.controller;
 
+import com.lambda.essentialism.model.Role;
 import com.lambda.essentialism.model.User;
+import com.lambda.essentialism.repo.RoleRepository;
+import com.lambda.essentialism.service.RoleService;
 import com.lambda.essentialism.service.UserService;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -20,45 +24,35 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RequestMapping("/api")
 @RestController
-public class UserController {
+public class UserController
+{
   @Autowired
   private UserService userService;
 
-  @GetMapping(value = "/users", produces = { "application/json" })
-  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-  public ResponseEntity<?> listAllUsers() {
-    List<User> myUsers = userService.findAll();
-    return new ResponseEntity<>(myUsers, HttpStatus.OK);
+  // REGISTER NEW USER
+  @PostMapping(value = "/register")
+  public ResponseEntity<?> addNewUser(@RequestBody @Valid User newuser) throws URISyntaxException {
+    newuser = userService.save(newuser);
+
+    System.out.println(newuser.getUserid());
+    // set the location header for the newly created resource
+    HttpHeaders responseHeaders = new HttpHeaders();
+    URI newUserURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{userid}").buildAndExpand(newuser.getUserid()).toUri();
+    responseHeaders.setLocation(newUserURI);
+
+    return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
   }
 
-  //  }
+  @GetMapping(value = "/user/{userId}")
+  public ResponseEntity<?> getUser(@PathVariable Long userId) {
+    User u = userService.findUserById(userId);
+    return new ResponseEntity<>(u, HttpStatus.OK);
+  }
 
-  @GetMapping(value = "/getusername", produces = { "application/json" })
+  @GetMapping(value = "/activeuser")
   @ResponseBody
   public ResponseEntity<?> getCurrentUserName(Authentication authentication) {
     return new ResponseEntity<>(authentication.getPrincipal(), HttpStatus.OK);
   }
-
-  @PutMapping(value = "/user/{id}")
-  public ResponseEntity<?> updateUser(
-    @RequestBody
-    User updateUser,
-    @PathVariable
-    long id
-  ) {
-    userService.update(updateUser, id);
-    return new ResponseEntity<>(HttpStatus.OK);
-  }
-
-  @DeleteMapping("/user/{id}")
-  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-  public ResponseEntity<?> deleteUserById(
-    @PathVariable
-    long id
-  ) {
-    userService.delete(id);
-    return new ResponseEntity<>(HttpStatus.OK);
-  }
-
 }
 

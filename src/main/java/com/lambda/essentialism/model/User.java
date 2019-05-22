@@ -30,20 +30,19 @@ public class User
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserRoles> userRoles = new ArrayList<>();
 
-  @JsonIgnoreProperties("value")
-  @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
+  @JsonIgnoreProperties("user")
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserValues> userValues = new ArrayList<>();
 
   public User() {}
 
-  public User(String username, String password, List<UserRoles> userRoles, List<UserValues> userValues) {
+  public User(String username, String password, List<UserRoles> userRoles) {
     setUsername(username);
     setPassword(password);
     for (UserRoles ur : userRoles) {
       ur.setUser(this);
     }
     this.userRoles = userRoles;
-    this.userValues = userValues;
 
   }
 
