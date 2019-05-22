@@ -1,17 +1,34 @@
 const axios = require('axios');
-const oauth = require('axios-oauth-client');
-const getOwnerCredentials = oauth.client(axios.create(), {
-  url: 'https://lambda-essentialism-backend.herokuapp.com/oauth/token',
-  client_id: 'lambda-client',
-  client_secret: 'lambda-secret',
-  username: 'testuser',
-  password: 'password'
-});
 
-// => { "access_token": "...", "expires_in": 900, ... }
+const API = 'https://lambda-essentialism-backend.herokuapp.com';
 
-async function login() {
-  const auth = await getOwnerCredentials();
-  console.log(await auth);
-}
-login();
+const reqData = {
+  username: 'admin',
+  password: 'password',
+  grant_type: 'password'
+};
+
+const queryString = Object.keys(reqData)
+  .map(key => key + '=' + reqData[key])
+  .join('&');
+
+const headers = {
+  url: `${API}/oauth/token`,
+  method: 'post',
+  withCredentials: true,
+  auth: { username: 'lambda-client', password: 'lambda-secret' },
+  data: queryString
+};
+
+axios
+  .request(headers)
+  .then(res => res.data.access_token)
+  .then(token =>
+    axios.get(`${API}/api/thisuser`, {
+      headers: {
+        Authorization: 'Bearer ' + token
+      }
+    })
+  )
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err));

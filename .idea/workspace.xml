@@ -4,19 +4,8 @@
     <list default="true" id="0f63d8d5-91f7-4c25-9664-e824fb194c81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserAuditing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserAuditing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/controller/ValueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/controller/ValueController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/service/ValueService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/service/ValueService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examplejs/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/examplejs/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examplejs/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/examplejs/register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -136,17 +125,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="711">
-                <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <first_editor relative-caret-position="707">
+                <caret line="94" selection-start-line="94" selection-end-line="94" />
               </first_editor>
               <second_editor />
             </state>
@@ -447,12 +431,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558517634499</updated>
       <workItem from="1558517645446" duration="8304000" />
-      <workItem from="1558551538162" duration="5000000" />
+      <workItem from="1558551538162" duration="5615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22504000" />
+    <option name="totallyTimeSpent" value="23119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -466,7 +450,7 @@
       <window_info id="Designer" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.21916972" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.16049382" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.16460906" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="Messages" order="3" weight="0.3271605" />
@@ -476,7 +460,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32921812" />
-      <window_info anchor="bottom" x="-298" y="159" width="1680" height="957" id="Run" internal_type="SLIDING" order="10" type="SLIDING" weight="0.22119342" />
+      <window_info anchor="bottom" x="-298" y="159" width="1680" height="957" id="Run" internal_type="SLIDING" order="10" type="SLIDING" weight="0.06481481" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -488,7 +472,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32931355" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.14041515" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.14041515" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
@@ -667,6 +651,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -674,14 +661,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="711">
-            <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <first_editor relative-caret-position="707">
+            <caret line="94" selection-start-line="94" selection-end-line="94" />
           </first_editor>
           <second_editor />
         </state>
