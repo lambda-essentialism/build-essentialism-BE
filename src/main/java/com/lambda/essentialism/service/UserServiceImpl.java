@@ -69,9 +69,11 @@ public class UserServiceImpl implements UserDetailsService, UserService {
   @Transactional
   public User save(User user) {
     User newUser = new User();
+    newUser.setFirstname(user.getFirstname());
+    newUser.setLastname(user.getLastname());
+    newUser.setEmail(user.getEmail());
     newUser.setUsername(user.getUsername());
     newUser.setPasswordNoEncrypt(user.getPassword());
-
     ArrayList<UserRoles> newRoles = new ArrayList<>();
     for (UserRoles ur : user.getUserRoles()) {
       newRoles.add(new UserRoles(newUser, ur.getRole()));

@@ -19,7 +19,7 @@ public class Value {
 
   @JsonIgnoreProperties("value")
   @OneToMany(mappedBy = "value", cascade = CascadeType.ALL)
-  private List<UserValues> userValues = new ArrayList<>();
+  private List<UserValues> values = new ArrayList<>();
 
   public Value() {}
 
@@ -44,11 +44,11 @@ public class Value {
   }
 
   public List<UserValues> getUserValues() {
-    return userValues;
+    return values;
   }
 
   public void setUserValues(List<UserValues> userValues) {
-    this.userValues = userValues;
+    this.values = userValues;
   }
 }
 

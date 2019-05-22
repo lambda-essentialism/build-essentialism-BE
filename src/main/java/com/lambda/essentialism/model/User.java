@@ -20,6 +20,12 @@ public class User
   @Id
   private long userid;
 
+  private String firstname;
+
+  private String lastname;
+
+  private String email;
+
   @Column(nullable = false, unique = true)
   private String username;
 
@@ -36,14 +42,14 @@ public class User
 
   public User() {}
 
-  public User(String username, String password, List<UserRoles> userRoles) {
+  public User(String firstname, String lastname, String email, String username, String password, List<UserRoles> userRoles) {
+    setFirstname(firstname);
+    setLastname(lastname);
+    setEmail(email);
     setUsername(username);
     setPassword(password);
-    for (UserRoles ur : userRoles) {
-      ur.setUser(this);
-    }
+    for (UserRoles ur : userRoles) { ur.setUser(this); }
     this.userRoles = userRoles;
-
   }
 
   public long getUserid() {
@@ -53,6 +59,18 @@ public class User
   public void setUserid(long userid) {
     this.userid = userid;
   }
+
+  public String getFirstname() { return firstname; }
+
+  public void setFirstname(String firstname) { this.firstname = firstname; }
+
+  public String getLastname() { return lastname; }
+
+  public void setLastname(String lastname) { this.lastname = lastname; }
+
+  public String getEmail() { return email; }
+
+  public void setEmail(String email) { this.email = email; }
 
   public String getUsername() {
     return username;

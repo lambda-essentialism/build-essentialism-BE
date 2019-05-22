@@ -29,15 +29,15 @@ public class UserController
   @Autowired
   private UserService userService;
 
+  @Autowired RoleService roleService;
+
   // REGISTER NEW USER
   @PostMapping(value = "/register")
-  public ResponseEntity<?> addNewUser(@RequestBody @Valid User newuser) throws URISyntaxException {
-    newuser = userService.save(newuser);
-
-    System.out.println(newuser.getUserid());
+  public ResponseEntity<?> addNewUser(@RequestBody @Valid User newUser) throws URISyntaxException {
+    roleService.saveUserRole(userService.save(newUser).getUserid(), 13);
     // set the location header for the newly created resource
     HttpHeaders responseHeaders = new HttpHeaders();
-    URI newUserURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{userid}").buildAndExpand(newuser.getUserid()).toUri();
+    URI newUserURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{userid}").buildAndExpand(newUser.getUserid()).toUri();
     responseHeaders.setLocation(newUserURI);
 
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);

@@ -80,9 +80,9 @@ public class SeedData implements CommandLineRunner {
 
     ArrayList<UserValues> userValues = new ArrayList<>();
 
-    User u1 = new User("gw", "password", users);
-    User u2 = new User("admin", "password", admins);
-    User u3 = new User("user", "password", data);
+    User u1 = new User("Garrett", "Weems", "gwgraphicdesign@gmail.com","gw", "password", users);
+    User u2 = new User("Sudo", "Admin", "sudo@admin.com","admin", "password", admins);
+    User u3 = new User("Dummy", "User", "dummy@user.com","user", "password", data);
     userrepos.save(u1);
     userrepos.save(u2);
     userrepos.save(u3);

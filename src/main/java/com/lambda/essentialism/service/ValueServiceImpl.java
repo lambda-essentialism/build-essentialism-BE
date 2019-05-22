@@ -40,17 +40,10 @@ public class ValueServiceImpl implements ValueService {
     return null;
   }
 
-//  @Override
   @Transactional
   public void saveUserValues(long userid, long roleid) {
     valueRepo.insertUserValues(userid, roleid);
   }
-
-//  @Override
-//  @Transactional
-//  public void deleteUserRole(long userid, long roleid) {
-//    rolerepos.deleteUserRoles(userid, roleid);
-//  }
 
 }
 
