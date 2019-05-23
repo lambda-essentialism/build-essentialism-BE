@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f63d8d5-91f7-4c25-9664-e824fb194c81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserProjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ProjectServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/SeedData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/SeedData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/controller/ValueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/controller/ValueController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -85,104 +89,210 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/exception/ResourceNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="580">
-                <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1659">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.54361373">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ProjectService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserProjects.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="260">
+                  <caret line="45" column="26" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="45" selection-end-column="26" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="695">
+                  <caret line="39" column="77" lean-forward="true" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="77" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-19">
+                  <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserRoles.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="183">
+                  <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="252">
+                  <caret line="12" column="73" lean-forward="true" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ProjectServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="651">
+                  <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Value.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="21" column="54" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="21" selection-end-column="54" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserValues.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="441">
+                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ProjectRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="63">
+                  <caret line="3" column="57" lean-forward="true" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="630">
+                  <caret line="54" column="71" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="54" selection-end-column="71" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Project.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#775#776#0" expanded="true" />
+                    <element signature="e#807#808#0" expanded="true" />
+                    <element signature="e#855#856#0" expanded="true" />
+                    <element signature="e#897#898#0" expanded="true" />
+                    <element signature="e#929#930#0" expanded="true" />
+                    <element signature="e#957#958#0" expanded="true" />
+                    <element signature="e#999#1000#0" expanded="true" />
+                    <element signature="e#1033#1034#0" expanded="true" />
+                    <element signature="e#1080#1081#0" expanded="true" />
+                    <element signature="e#1111#1112#0" expanded="true" />
+                    <element signature="e#1171#1172#0" expanded="true" />
+                    <element signature="e#1211#1212#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,21 +309,28 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repo/ValueRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserAuditing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7da198a3-cd9f-427f-b58a-41dd9fa11aa0/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ProjectService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ProjectRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserProjects.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java" />
       </list>
     </option>
   </component>
@@ -240,17 +357,15 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="987" />
-    <option name="y" value="23" />
-    <option name="width" value="1573" />
-    <option name="height" value="1368" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -399,7 +514,20 @@
               <item name="essentialism" type="58d84e3e:PackageViewProjectNode" />
               <item name="build-week-3" type="616d4139:PackageViewModuleNode" />
               <item name="com.lambda.essentialism" type="1f31426a:PackageElementNode" />
+              <item name="repository" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="essentialism" type="58d84e3e:PackageViewProjectNode" />
+              <item name="build-week-3" type="616d4139:PackageViewModuleNode" />
+              <item name="com.lambda.essentialism" type="1f31426a:PackageElementNode" />
               <item name="service" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="essentialism" type="58d84e3e:PackageViewProjectNode" />
+              <item name="build-week-3" type="616d4139:PackageViewModuleNode" />
+              <item name="com.lambda.essentialism" type="1f31426a:PackageElementNode" />
+              <item name="service" type="1f31426a:PackageElementNode" />
+              <item name="impl" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -419,7 +547,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -459,15 +587,15 @@
       <updated>1558517634499</updated>
       <workItem from="1558517645446" duration="8304000" />
       <workItem from="1558551538162" duration="6368000" />
-      <workItem from="1558628457380" duration="50000" />
+      <workItem from="1558628457380" duration="6095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25333000" />
+    <option name="totallyTimeSpent" value="31378000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="987" y="23" width="1573" height="1368" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -476,31 +604,31 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.36316133" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.13145353" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3935331" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.22613803" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="Messages" order="3" weight="0.3271605" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" show_stripe_button="false" weight="0.32922825" />
       <window_info anchor="bottom" id="Database Changes" order="5" weight="0.32924837" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3223201" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32967034" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.30323055" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32921812" />
-      <window_info anchor="bottom" x="-298" y="159" width="1680" height="957" id="Run" internal_type="SLIDING" order="10" type="SLIDING" weight="0.022633744" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info active="true" anchor="bottom" x="-298" y="159" width="1680" height="957" id="Run" internal_type="SLIDING" order="10" visible="true" weight="0.2452276" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39941263" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32922825" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32892805" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.33102652" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.10365369" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Bean Validation" order="5" weight="0.32931355" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.28513733" />
+      <window_info anchor="right" id="Bean Validation" order="5" weight="0.32922953" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.1731533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
@@ -514,13 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -540,27 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7da198a3-cd9f-427f-b58a-41dd9fa11aa0/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://7da198a3-cd9f-427f-b58a-41dd9fa11aa0/database/essentialism/schema/public/table/userroles.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -578,24 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/UserAuditing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -609,24 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-873">
           <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -637,10 +713,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/exception/ResourceNotFoundException.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1079">
+            <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="840">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -651,45 +737,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/RolesController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/exception/ResourceNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+        <state relative-caret-position="105">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="54" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/RoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#44#1" expanded="true" />
+            <element signature="e#0#44#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7da198a3-cd9f-427f-b58a-41dd9fa11aa0/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state relative-caret-position="714">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ValueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ValueServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+        <state relative-caret-position="420">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="189">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -698,18 +812,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ValueController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="630">
+          <caret line="54" column="71" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="54" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="580">
-            <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ValueRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/service/impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/repository/ProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="57" lean-forward="true" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="39" column="77" lean-forward="true" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserProjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="73" lean-forward="true" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/UserRoles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambda/essentialism/SeedData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="45" column="26" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

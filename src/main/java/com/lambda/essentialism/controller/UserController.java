@@ -50,7 +50,7 @@ public class UserController
     return new ResponseEntity<>(u, HttpStatus.OK);
   }
 
-  @GetMapping(value = "/thisuser")
+  @GetMapping(value = "/user")
   @ResponseBody
   public ResponseEntity<?> getCurrentUser(Authentication authentication) {
     return new ResponseEntity<>(userService.findUserByUsername(authentication.getName()), HttpStatus.OK);

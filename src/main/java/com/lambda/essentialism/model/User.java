@@ -43,6 +43,10 @@ public class User
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserValues> userValues = new ArrayList<>();
 
+  @JsonIgnoreProperties("user")
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+  private List<UserProjects> userProjects = new ArrayList<>();
+
   public User() {}
 
   public User(String firstname, String lastname, String email, String username, String password, List<UserRoles> userRoles) {
@@ -120,5 +124,9 @@ public class User
   public void setUserValues(List<UserValues> userValues) {
     this.userValues = userValues;
   }
+
+  public List<UserProjects> getUserProjects() { return userProjects; }
+
+  public void setUserProjects(List<UserProjects> userProjects) { this.userProjects = userProjects; }
 }
 

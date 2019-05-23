@@ -1,6 +1,5 @@
 package com.lambda.essentialism.service;
 
-import com.lambda.essentialism.model.User;
 import com.lambda.essentialism.model.Value;
 
 import java.util.List;
