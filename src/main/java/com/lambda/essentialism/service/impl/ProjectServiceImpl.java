@@ -24,11 +24,10 @@ public class ProjectServiceImpl implements ProjectService
         return list;
     }
 
-
-    @Override
-    public List<Project> findUserProjects(long userid) {
-        List<Project> list = new ArrayList<>();
-        projectRepository.findUserProjects(userid).iterator().forEachRemaining(list::add);
-        return list;
-    }
+//    @Override
+//    public List<Project> findUserProjects(long userid) {
+//        List<Project> list = new ArrayList<>();
+//        projectRepository.findUserProjects(userid).iterator().forEachRemaining(list::add);
+//        return list;
+//    }
 }

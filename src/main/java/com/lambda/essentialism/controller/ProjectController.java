@@ -8,12 +8,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class ProjectController {
@@ -30,16 +32,16 @@ public class ProjectController {
     }
 
 
-    @GetMapping("/projects")
-    public ResponseEntity<?> listUserProjects() {
-
-        String username = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-
-        long userid = userService.findUserByUsername(username).getUserid();
-
-        List<Project> userProjects = projectService.findUserProjects(userid);
-        return new ResponseEntity<>(userProjects, HttpStatus.OK);
-    }
+//    @GetMapping("/projects")
+//    public ResponseEntity<?> listUserProjects() {
+//
+//        String username = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+//
+//        long userid = userService.findUserByUsername(username).getUserid();
+//
+//        List<Project> userProjects = projectService.findUserProjects(userid);
+//        return new ResponseEntity<>(userProjects, HttpStatus.OK);
+//    }
 
 
 

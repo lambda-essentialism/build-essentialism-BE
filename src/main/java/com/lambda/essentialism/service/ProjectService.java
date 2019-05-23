@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProjectService {
     List<Project> findAll();
 
-    List<Project> findUserProjects(long userid);
+//    List<Project> findUserProjects(long userid);
 }
