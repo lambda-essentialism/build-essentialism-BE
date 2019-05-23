@@ -28,11 +28,17 @@ public class UserController
 
   // REGISTER NEW USER
   @PostMapping(value = "/register")
-  public ResponseEntity<?> addNewUser(@RequestBody @Valid User newUser) throws URISyntaxException {
-    roleService.saveUserRole(userService.save(newUser).getUserid(), 13);
+  public ResponseEntity<?> addNewUser(@Valid @RequestBody User newuser) throws URISyntaxException
+  {
+    newuser =  userService.save(newuser);
+
     // set the location header for the newly created resource
     HttpHeaders responseHeaders = new HttpHeaders();
-    URI newUserURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{userid}").buildAndExpand(newUser.getUserid()).toUri();
+    URI newUserURI = ServletUriComponentsBuilder
+            .fromCurrentRequest()
+            .path("/{userid}")
+            .buildAndExpand(newuser.getUserid())
+            .toUri();
     responseHeaders.setLocation(newUserURI);
 
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);

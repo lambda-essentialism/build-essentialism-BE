@@ -1,6 +1,7 @@
 package com.lambda.essentialism.controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.lambda.essentialism.exception.ResourceNotFoundException;
 import com.lambda.essentialism.model.Value;
 import com.lambda.essentialism.service.UserService;
 import com.lambda.essentialism.service.ValueService;
@@ -47,15 +48,19 @@ public class ValueController {
 
   // DELETE: Add new user value
   @DeleteMapping("/values/{valueId}")
-  public ResponseEntity<?> deleteUserValue(@PathVariable Long valueId) {
+  public ResponseEntity<?> deleteUserValue(@PathVariable Long valueId) throws ResourceNotFoundException {
 
     String username = ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
 
     long userid = userService.findUserByUsername(username).getUserid();
 
-    valueService.deleteUserValue(valueId, userid);
-
-    return new ResponseEntity<>(null, HttpStatus.CREATED);
+    Value value = valueService.findById(valueId);
+    if (value != null) {
+      valueService.deleteUserValue(valueId, userid);
+      return new ResponseEntity<>(null, HttpStatus.OK);
+    } else {
+      return null;
+    }
   }
 
 }

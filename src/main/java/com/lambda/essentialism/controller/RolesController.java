@@ -29,73 +29,44 @@ public class RolesController {
   }
 
   @GetMapping(value = "/role/{roleId}", produces = { "application/json" })
-  public ResponseEntity<?> getRole(
-    @PathVariable
-    Long roleId
-  ) {
+  public ResponseEntity<?> getRole(@PathVariable Long roleId) {
     Role r = roleService.findRoleById(roleId);
     return new ResponseEntity<>(r, HttpStatus.OK);
   }
 
   @PostMapping(value = "/role")
-  public ResponseEntity<?> addNewRole(
-    @RequestBody
-    @Valid
-    Role newRole
-  )
-    throws
-      URISyntaxException {
+  public ResponseEntity<?> addNewRole(@RequestBody @Valid Role newRole) throws URISyntaxException {
     newRole = roleService.save(newRole);
 
     // set the location header for the newly created resource
     HttpHeaders responseHeaders = new HttpHeaders();
-    URI newRoleURI = ServletUriComponentsBuilder.fromCurrentRequest().path(
-      "/{roleid}"
-    ).buildAndExpand(newRole.getRoleid()).toUri();
+    URI newRoleURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{roleid}").buildAndExpand(newRole.getRoleid()).toUri();
     responseHeaders.setLocation(newRoleURI);
 
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
   }
 
   @PutMapping(value = "/role/{roleid}")
-  public ResponseEntity<?> updateRole(
-    @RequestBody
-    Role updateRole,
-    @PathVariable
-    long roleid
-  ) {
+  public ResponseEntity<?> updateRole(@RequestBody Role updateRole, @PathVariable long roleid) {
     roleService.update(updateRole, roleid);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
   @DeleteMapping("/role/{id}")
-  public ResponseEntity<?> deleteRoleById(
-    @PathVariable
-    long id
-  ) {
+  public ResponseEntity<?> deleteRoleById(@PathVariable long id) {
     roleService.delete(id);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
   @PostMapping(value = "/user/{userid}/role/{roleid}")
-  public ResponseEntity<?> addUserRole(
-    @PathVariable
-    long userid,
-    @PathVariable
-    long roleid
-  ) {
+  public ResponseEntity<?> addUserRole(@PathVariable long userid, @PathVariable long roleid) {
     roleService.saveUserRole(userid, roleid);
 
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
   @DeleteMapping(value = "/user/{userid}/role/{roleid}")
-  public ResponseEntity<?> deleteUserRole(
-    @PathVariable
-    long userid,
-    @PathVariable
-    long roleid
-  ) {
+  public ResponseEntity<?> deleteUserRole(@PathVariable long userid, @PathVariable long roleid) {
     roleService.deleteUserRole(userid, roleid);
 
     return new ResponseEntity<>(HttpStatus.OK);
