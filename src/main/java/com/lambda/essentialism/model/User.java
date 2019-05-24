@@ -1,5 +1,6 @@
 package com.lambda.essentialism.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 // User is considered the parent entity of all - the Grand Poobah!
 @Entity
 @Table(name = "users")
+@JsonIgnoreProperties("authority")
 public class User
   extends Auditable {
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,7 +37,8 @@ public class User
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private String password;
 
-  @JsonIgnoreProperties("user")
+  @JsonIgnore
+  @JsonIgnoreProperties({"user", "userRoles", "role"})
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserRoles> userRoles = new ArrayList<>();
 
@@ -43,9 +46,9 @@ public class User
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   private List<UserValues> userValues = new ArrayList<>();
 
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
   @JsonIgnoreProperties("user")
-  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-  private List<UserProjects> userProjects = new ArrayList<>();
+  private List<Project> projects = new ArrayList<>();
 
   public User() {}
 
@@ -125,8 +128,9 @@ public class User
     this.userValues = userValues;
   }
 
-  public List<UserProjects> getUserProjects() { return userProjects; }
+  public List<Project> getProjects() { return projects; }
 
-  public void setUserProjects(List<UserProjects> userProjects) { this.userProjects = userProjects; }
+  public void setProjects(List<Project> projects) { this.projects = projects; }
+
 }
 

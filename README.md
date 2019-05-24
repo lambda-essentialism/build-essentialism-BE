@@ -46,7 +46,7 @@ axios
   .request(headers)
   .then(res => res.data.access_token)
   .then(token =>
-    axios.get(`${API}/api/user`, {
+    axios.get(`${API}/api/thisuser`, {
       headers: {
         Authorization: 'Bearer ' + token
       }
@@ -92,7 +92,36 @@ sample response
 }
 ```
 
-## DELETE `/api/value{valueid}`
+
+## DELETE	`/api/value{valueid}`
 Send a delete request to this endpoint and it will delete that value for the current user signed in;
 
-mvp
+## GET `/api/projects`
+Must be logged in to make request
+Example response
+```js
+[
+  {
+    "projectid": 17,
+    "title": "The enemy of my enemy is the enemy I kill last"
+  },
+  {
+    "projectid": 18,
+    "title": "Beam me up"
+  },
+// ...
+]
+```
+
+## POST `/api/projects`
+Must be logged in to make request
+```js
+// Expected in body
+{
+	"title": "Get SH*T done"
+}
+```
+
+## DELETE `/api/projects/{projectId}`
+Post request has to be from a user that is logged in and is the project owner
+

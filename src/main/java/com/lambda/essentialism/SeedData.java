@@ -1,7 +1,6 @@
 package com.lambda.essentialism;
 
 import com.lambda.essentialism.model.*;
-import com.lambda.essentialism.repository.ProjectRepository;
 import com.lambda.essentialism.repository.RoleRepository;
 import com.lambda.essentialism.repository.UserRepository;
 import com.lambda.essentialism.repository.ValueRepository;
@@ -17,33 +16,18 @@ import org.springframework.stereotype.Component;
 @Transactional
 public class SeedData implements CommandLineRunner {
 
-
   ValueRepository valueRepos;
   RoleRepository rolerepos;
   UserRepository userrepos;
-  ProjectRepository projectRepos;
 
-  public SeedData(
-    ValueRepository valueRepos,
-    RoleRepository rolerepos,
-    UserRepository userrepos,
-    ProjectRepository projectRepos
-  ) {
+  public SeedData(ValueRepository valueRepos, RoleRepository rolerepos, UserRepository userrepos) {
     this.valueRepos = valueRepos;
     this.rolerepos = rolerepos;
     this.userrepos = userrepos;
-    this.projectRepos = projectRepos;
   }
 
   @Override
   public void run(String[] args) throws Exception {
-  ArrayList<UserProjects> userProjects = new ArrayList<>();
-  Project pro1 = new Project("Be a hacker.", userProjects);
-  Project pro2 = new Project("Do more yoga.", userProjects);
-  Project pro3 = new Project("Eat more chicken.", userProjects);
-  projectRepos.save(pro1);
-  projectRepos.save(pro2);
-  projectRepos.save(pro3);
 
     Value val1 = new Value("Athletic ability");
     Value val2 = new Value(
@@ -95,7 +79,12 @@ public class SeedData implements CommandLineRunner {
     ArrayList<UserValues> userValues = new ArrayList<>();
 
     User u1 = new User("Garrett", "Weems", "gwgraphicdesign@gmail.com","gw", "password", users);
+    u1.getProjects().add(new Project("Live long and prosper", u1));
+    u1.getProjects().add(new Project("The enemy of my enemy is the enemy I kill last", u1));
+    u1.getProjects().add(new Project("Beam me up", u1));
     User u2 = new User("Sudo", "Admin", "sudo@admin.com","admin", "password", admins);
+    u2.getProjects().add(new Project("A creative man is motivated by the desire to achieve, not by the desire to beat others", u2));
+    u2.getProjects().add(new Project("The question isn't who is going to let me; it's who is going to stop me.", u2));
     User u3 = new User("Dummy", "User", "dummy@user.com","user", "password", data);
     userrepos.save(u1);
     userrepos.save(u2);

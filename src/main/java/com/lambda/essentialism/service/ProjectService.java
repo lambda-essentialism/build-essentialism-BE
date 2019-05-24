@@ -4,8 +4,15 @@ import com.lambda.essentialism.model.Project;
 
 import java.util.List;
 
-public interface ProjectService {
+public interface ProjectService
+{
     List<Project> findAll();
 
-//    List<Project> findUserProjects(long userid);
+    Project findProjectById(long id);
+
+    List<Project> findByUserName(String username);
+
+    void delete(long id);
+
+    Project save(Project project);
 }

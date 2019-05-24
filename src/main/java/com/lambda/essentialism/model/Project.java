@@ -3,53 +3,42 @@ package com.lambda.essentialism.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "projects")
-public class Project {
-
+@JsonIgnoreProperties("user")
+public class Project extends Auditable
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long projectid;
 
-    @Column(name = "title", nullable = false, unique = true)
+    @Column(nullable = false)
     private String title;
 
-    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"project", "projects", "userProjects", "user"})
-    private List<UserProjects> projects = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userid",
+            nullable = false)
+    @JsonIgnoreProperties({"projects", "hibernateLazyInitializer"})
+    private User user;
 
-    public Project() {
-    }
+    public Project() {}
 
-    public Project(String title, List<UserProjects> projects) {
+    public Project(String title, User user)
+    {
         this.title = title;
-        this.projects = projects;
+        this.user = user;
     }
 
-    public long getProjectid() {
-        return projectid;
-    }
+    public long getProjectid() { return projectid; }
 
-    public void setProjectid(long projectid) {
-        this.projectid = projectid;
-    }
+    public void setProjectid(long projectid) { this.projectid = projectid; }
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() { return title; }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
-    public List<UserProjects> getProjects() {
-        return projects;
-    }
+    public User getUser() { return user; }
 
-    public void setProjects(List<UserProjects> projects) {
-        this.projects = projects;
-    }
+    public void setUser(User user) { this.user = user; }
 }
