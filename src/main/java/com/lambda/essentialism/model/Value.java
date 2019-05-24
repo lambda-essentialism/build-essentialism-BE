@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "values")
+@JsonIgnoreProperties("userValues")
 public class Value {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
