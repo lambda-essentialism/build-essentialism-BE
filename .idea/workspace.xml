@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f63d8d5-91f7-4c25-9664-e824fb194c81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-week-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/build-week-3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambda/essentialism/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/model/Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lambda/essentialism/model/Value.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -134,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="136" column="80" selection-start-line="136" selection-start-column="80" selection-end-line="136" selection-end-column="80" />
+            <state relative-caret-position="608">
+              <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -420,12 +415,12 @@
       <workItem from="1558517645446" duration="8304000" />
       <workItem from="1558551538162" duration="6368000" />
       <workItem from="1558628457380" duration="15783000" />
-      <workItem from="1558706513630" duration="9046000" />
+      <workItem from="1558706513630" duration="9145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50112000" />
+    <option name="totallyTimeSpent" value="50211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="766" y="23" width="1794" height="1369" extended-state="0" />
@@ -437,9 +432,9 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.1706621" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.1706621" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21197793" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21197793" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="Messages" order="3" weight="0.32613724" />
@@ -870,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="136" column="80" selection-start-line="136" selection-start-column="80" selection-end-line="136" selection-end-column="80" />
+        <state relative-caret-position="608">
+          <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
         </state>
       </provider>
     </entry>
