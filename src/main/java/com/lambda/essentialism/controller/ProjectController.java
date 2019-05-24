@@ -61,6 +61,19 @@ public class ProjectController
         return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
     }
 
+//
+//    @PutMapping("/projects/{id}")
+//    public ResponseEntity<?> renameProject(@PathVariable long id, @Valid @RequestBody Project projectTitle) {
+//        String username = ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+//        Project project = projectService.findProjectById(id);
+//
+//        if (username.equalsIgnoreCase(project.getUser().getUsername())) {
+//            projectService.save(project.getProjectid());
+//            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+//        }
+//    }
 
     @DeleteMapping("/projects/{id}")
     public ResponseEntity<?> deleteQuoteById(@PathVariable long id) {
