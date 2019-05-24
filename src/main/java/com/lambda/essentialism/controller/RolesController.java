@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RequestMapping("/roles")
 @RestController
 public class RolesController {
@@ -24,17 +24,20 @@ public class RolesController {
   RoleService roleService;
 
   @GetMapping(value = "/roles", produces = { "application/json" })
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> listRoles() {
     List<Role> allRoles = roleService.findAll();
     return new ResponseEntity<>(allRoles, HttpStatus.OK);
   }
 
   @GetMapping(value = "/role/{roleId}", produces = { "application/json" })
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> getRole(@PathVariable Long roleId) {
     Role r = roleService.findRoleById(roleId);
     return new ResponseEntity<>(r, HttpStatus.OK);
   }
 
+  @CrossOrigin(origins = "http://localhost:3000")
   @PostMapping(value = "/role")
   public ResponseEntity<?> addNewRole(@RequestBody @Valid Role newRole) throws URISyntaxException {
     newRole = roleService.save(newRole);
@@ -47,6 +50,7 @@ public class RolesController {
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
   }
 
+  @CrossOrigin(origins = "*")
   @PutMapping(value = "/role/{roleid}")
   public ResponseEntity<?> updateRole(@RequestBody Role updateRole, @PathVariable long roleid) {
     roleService.update(updateRole, roleid);
@@ -54,12 +58,14 @@ public class RolesController {
   }
 
   @DeleteMapping("/role/{id}")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> deleteRoleById(@PathVariable long id) {
     roleService.delete(id);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
   @PostMapping(value = "/user/{userid}/role/{roleid}")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> addUserRole(@PathVariable long userid, @PathVariable long roleid) {
     roleService.saveUserRole(userid, roleid);
 
@@ -67,6 +73,7 @@ public class RolesController {
   }
 
   @DeleteMapping(value = "/user/{userid}/role/{roleid}")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> deleteUserRole(@PathVariable long userid, @PathVariable long roleid) {
     roleService.deleteUserRole(userid, roleid);
 

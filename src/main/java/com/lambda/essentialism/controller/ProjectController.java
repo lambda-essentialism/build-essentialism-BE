@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class ProjectController {
     @Autowired
     private ProjectService projectService;
@@ -25,6 +25,7 @@ public class ProjectController {
     @Autowired
     private UserService userService;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/allprojects")
     public ResponseEntity<?> listAllProjects() {
         List<Project> allProjects = projectService.findAll();

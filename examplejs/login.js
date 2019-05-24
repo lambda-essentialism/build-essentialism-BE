@@ -11,7 +11,6 @@ const reqData = {
 const queryString = Object.keys(reqData)
   .map(key => key + '=' + reqData[key])
   .join('&');
-
 const headers = {
   url: `${API}/oauth/token`,
   method: 'post',

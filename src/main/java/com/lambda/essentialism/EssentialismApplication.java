@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@EnableJpaAuditing
 @EnableWebMvc
+@EnableJpaAuditing
 @SpringBootApplication
 public class EssentialismApplication {
 

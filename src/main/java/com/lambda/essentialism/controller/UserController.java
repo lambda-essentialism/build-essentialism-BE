@@ -17,7 +17,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 @RestController
 public class UserController
@@ -29,6 +29,7 @@ public class UserController
 
   // REGISTER NEW USER
   @PostMapping(value = "/register")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> addNewUser(@Valid @RequestBody User newuser) throws URISyntaxException
   {
     newuser =  userService.save(newuser);
@@ -45,12 +46,14 @@ public class UserController
     return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
   }
 
+  @CrossOrigin(origins = "*")
   @GetMapping(value = "/user/{userId}")
   public ResponseEntity<?> getUser(@PathVariable Long userId) {
     User u = userService.findUserById(userId);
     return new ResponseEntity<>(u, HttpStatus.OK);
   }
 
+  @CrossOrigin(origins = "*")
   @GetMapping(value = "/user")
   @ResponseBody
   public ResponseEntity<?> getCurrentUser(Authentication authentication) {

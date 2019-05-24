@@ -46,7 +46,7 @@ axios
   .request(headers)
   .then(res => res.data.access_token)
   .then(token =>
-    axios.get(`${API}/api/thisuser`, {
+    axios.get(`${API}/api/user`, {
       headers: {
         Authorization: 'Bearer ' + token
       }

@@ -27,6 +27,7 @@ public class ValueController {
 
   @JsonIgnoreProperties("userValues")
   @GetMapping("/values")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> listAllValues() {
     List<Value> allValues = valueService.findAll();
     return new ResponseEntity<>(allValues, HttpStatus.OK);
@@ -34,6 +35,7 @@ public class ValueController {
 
   // POST: Add new user value
   @PostMapping("/values/{valueId}")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> addUserValue(@PathVariable Long valueId) {
 
     String username = ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
@@ -48,6 +50,7 @@ public class ValueController {
 
   // DELETE: Add new user value
   @DeleteMapping("/values/{valueId}")
+  @CrossOrigin(origins = "*")
   public ResponseEntity<?> deleteUserValue(@PathVariable Long valueId) throws ResourceNotFoundException {
 
     String username = ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
